@@ -2,12 +2,14 @@
 
 Coresignal MCP — LinkedIn-adjacent company + employee data (coresignal.com)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1209+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
+| `coresignal_company` | Look up a company's firmographics + headcount (size, employee count, industry, founding year, HQ, LinkedIn URL) from Coresignal by company name or website. LinkedIn-adjacent B2B data. Example: coresignal_company({ name: "Stripe", _apiKey: "your-key" }) |
+| `coresignal_employee` | Find a person's professional profile by name (+company) via Coresignal — returns title, current company, location, LinkedIn URL, work experience and education. LinkedIn-adjacent people data. Example: coresignal_employee({ name: "Patrick Collison", company: "Stripe", _apiKey: "your-key" }) |
 
 ## Quick Start
 
@@ -23,7 +25,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 1209+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +49,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License

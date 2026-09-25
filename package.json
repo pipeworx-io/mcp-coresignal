@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-coresignal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Coresignal MCP — LinkedIn-adjacent company + employee data (coresignal.com)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-e4ce583852ce7129637619f67fa925033fdc0bdece3dac083bf8b8aed70608ca",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-c728a20cfd56ff56e5b548de1034fceef3bf7be6b37d2cfe389e2cc00cd328db",
+    "sourceCommit": "5b29c2b0c11e1fcd954969a245b474e6e9475116"
   }
 }

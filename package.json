@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-coresignal",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Coresignal MCP — LinkedIn-adjacent company + employee data (coresignal.com)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-coresignal": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "coresignal"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-coresignal.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/coresignal",
   "pipeworx": {
-    "sourceHash": "v1-ef246330aa61573240adb7730a68d51a6a58902a029b008d47e518c5428fc7ce",
-    "sourceCommit": "f1ef7a2f6b9cb1b8da1374ec2fcb28c661582b35"
+    "mode": "gateway",
+    "slug": "coresignal",
+    "gatewaySlug": "coresignal",
+    "sourceHash": "v1-219425a70653deeae839e69f52725a724e2f260f569f2b8be4ac8936f1c1e9c7",
+    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
   }
 }

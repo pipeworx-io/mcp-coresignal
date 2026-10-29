@@ -1,0 +1,51 @@
+[
+  {
+    "name": "coresignal_company",
+    "description": "Look up a company's firmographics + headcount (size, employee count, industry, founding year, HQ, LinkedIn URL) from Coresignal by company name or website. LinkedIn-adjacent B2B data. Example: coresignal_company({ name: \"Stripe\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name to look up, e.g. \"Stripe\", \"OpenAI\". Provide this OR `website`."
+        },
+        "website": {
+          "type": "string",
+          "description": "Company website/domain, e.g. \"stripe.com\". Provide this OR `name`."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Coresignal API key (BYO). Sign up + start a trial at coresignal.com."
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "coresignal_employee",
+    "description": "Find a person's professional profile by name (+company) via Coresignal — returns title, current company, location, LinkedIn URL, work experience and education. LinkedIn-adjacent people data. Example: coresignal_employee({ name: \"Patrick Collison\", company: \"Stripe\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the person, e.g. \"Patrick Collison\"."
+        },
+        "company": {
+          "type": "string",
+          "description": "Optional company name to disambiguate, e.g. \"Stripe\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Coresignal API key (BYO). Sign up + start a trial at coresignal.com."
+        }
+      },
+      "required": [
+        "name",
+        "_apiKey"
+      ]
+    }
+  }
+]
